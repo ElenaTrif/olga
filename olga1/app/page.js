@@ -207,7 +207,7 @@ export default function Home() {
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold mb-4 text-center">Nous trouver</h2>
           <iframe
-            src="https://www.google.com/maps/embed?pb=... (votre URL ici)"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2884.469179003254!2d7.26916494077989!3d43.700797849470966!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12cddaa5cb80da29%3A0x819061a85fa2183e!2s23%20Rue%20Pastorelli%2C%2006000%20Nice!5e0!3m2!1sfr!2sfr!4v1736194751049!5m2!1sfr!2sfr"
             width="100%"
             height="300"
             className="rounded-lg shadow-md"
