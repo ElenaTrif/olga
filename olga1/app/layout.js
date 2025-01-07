@@ -1,5 +1,12 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Bentham, Geist, Geist_Mono } from "next/font/google"; // Changer Benton en Bentham
 import "./globals.css";
+
+// Import des polices avec Next.js Font Optimization
+const bentham = Bentham({ // Utilisation de la police Bentham
+  variable: "--font-bentham",
+  subsets: ["latin"], // Utilisation du sous-ensemble latin
+  weight: "400", // Poids de la police
+});
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -14,7 +21,6 @@ const geistMono = Geist_Mono({
 export const metadata = {
   title: "Olga Beauty Expert",
   description: "Olga Beauty Expert - Soins de peau, massages et plus",
-  // Ajoute d'autres métadonnées si nécessaire
   openGraph: {
     title: "Olga Beauty Expert",
     description: "Olga Beauty Expert - Soins de peau, massages et plus",
@@ -30,8 +36,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+    <html lang="fr">
+      <body className={`${geistSans.variable} ${geistMono.variable} ${bentham.variable} antialiased`}>
         {children}
       </body>
     </html>

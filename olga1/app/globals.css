@@ -5,6 +5,7 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --accent-color: #e4d3af; /* Accent doré */
 }
 
 @media (prefers-color-scheme: dark) {
@@ -14,8 +15,51 @@
   }
 }
 
+@layer utilities {
+  .text-blue-marine {
+    color: #003366;
+  }
+}
+
+
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Poppins', sans-serif; /* Poppins comme police par défaut */
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Poppins', sans-serif; /* Utilisation de Poppins pour les titres */
+}
+
+p, a {
+  font-family: 'Poppins', sans-serif; /* Poppins pour les paragraphes et liens */
+}
+
+/* Appliquer Bentham spécifiquement à l'élément "Olga Beauty Expert" */
+#olga-beauty-expert {
+  font-family: var(--font-bentham), sans-serif; /* Utilisation de Bentham pour "Olga Beauty Expert" */
+}
+
+/* Appliquer Bentham à tous les h1 */
+h1 {
+  font-family: var(--font-bentham), sans-serif; /* Appliquer Bentham à tous les h1 */
+}
+
+/* Appliquer Bentham sur tous les titres dans cette section */
+#olga-beauty-expert h1,
+#olga-beauty-expert h2,
+#olga-beauty-expert h3 {
+  font-family: var(--font-bentham), sans-serif;
+}
+
+/* Exemple d'application de la police Bentham sur un titre spécifique dans le header */
+header h1 {
+  font-family: var(--font-bentham), sans-serif;
+}
+
+/* Exemple d'application de la police Bentham sur le texte spécifique dans la section "hero" */
+section#hero h1,
+section#hero p {
+  font-family: var(--font-bentham), sans-serif;
 }

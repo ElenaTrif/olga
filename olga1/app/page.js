@@ -25,6 +25,7 @@ export default function Home() {
           className="text-center"
         >
           <motion.h1
+            id="olga-beauty-expert" // Utilisation de la classe CSS pour appliquer Benton ici
             className="text-4xl font-bold"
             animate={{
               opacity: [0.4, 1, 0.4],
@@ -49,8 +50,8 @@ export default function Home() {
         <div className="flex justify-between items-center max-w-7xl mx-auto py-4 px-6">
           {/* Left - Logo */}
           <div>
-            <h1 className="text-2xl font-bold text-gray-800 font-poppins">Olga Beauty Expert</h1>
-            <p className="text-sm text-gray-500 font-poppins">Soins exclusifs, peau rayonnante</p>
+            <h1 className="text-2xl font-bold text-blue-marine">Olga Beauty Expert</h1>
+            <p className="text-sm text-blue-marine">Soins exclusifs, peau rayonnante</p>
           </div>
 
           {/* Right - Desktop Menu */}
@@ -58,12 +59,12 @@ export default function Home() {
             {['Tous nos soins', 'Tarifs', 'Offrir', 'Carte', 'Contact'].map((item, index) => (
               <motion.div
                 key={index}
-                whileHover={{ scale: 1.1, color: '#FF7F50' }}
+                whileHover={{ scale: 1.1, color: '#B39D6F' }} // Accent doré
                 whileTap={{ scale: 0.95 }}
               >
                 <Link
                   href={`#${item.toLowerCase().replace(/\s+/g, '-')}`}
-                  className="text-lg font-medium cursor-pointer font-poppins"
+                  className="text-lg font-medium cursor-pointer"
                 >
                   {item}
                 </Link>
@@ -89,12 +90,12 @@ export default function Home() {
               {['Tous nos soins', 'Tarifs', 'Offrir', 'Carte', 'Contact'].map((item, index) => (
                 <motion.div
                   key={index}
-                  whileHover={{ scale: 1.1, color: '#FF7F50' }}
+                  whileHover={{ scale: 1.1, color: '#B39D6F' }} // Accent doré
                   whileTap={{ scale: 0.95 }}
                 >
                   <Link
                     href={`#${item.toLowerCase().replace(/\s+/g, '-')}`}
-                    className="text-lg font-medium cursor-pointer font-poppins"
+                    className="text-lg font-medium cursor-pointer"
                     onClick={() => setMenuOpen(false)}
                   >
                     {item}
@@ -120,7 +121,7 @@ export default function Home() {
             initial={{ opacity: 0, y: -50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
-            className="text-5xl font-bold font-poppins"
+            className="text-5xl font-bold"
           >
             Olga Beauty Expert
           </motion.h1>
@@ -128,14 +129,24 @@ export default function Home() {
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.5 }}
-            className="mt-4 text-lg font-poppins"
+            className="mt-4 text-lg"
           >
             Des soins exclusifs pour une peau rayonnante
           </motion.p>
           <motion.button
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
-            className="mt-6 px-6 py-3 bg-pink-600 text-white text-lg font-bold rounded-lg shadow-md font-poppins"
+            className="mt-6 px-6 py-3 bg-[#ffffff] text-blue-marine text-lg font-bold rounded-full shadow-md"
+          >
+            Réservez maintenant
+          </motion.button>
+          <motion.button
+            whileHover={{
+              scale: 1.1,
+              backgroundPosition: "100% 0", // Fait glisser la couleur du fond de gauche à droite
+            }}
+            whileTap={{ scale: 0.95 }}
+            className="mt-6 px-6 py-3 bg-[#ffffff] text-blue-marine text-lg font-bold rounded-full shadow-md transition-all duration-500 ease-in-out bg-gradient-to-r from-[#003366] via-transparent to-[#003366] hover:via-[#003366] hover:to-[#003366] hover:text-white hover:bg-[#003366]"
           >
             Réservez maintenant
           </motion.button>
@@ -145,8 +156,8 @@ export default function Home() {
       {/* About Section */}
       <section id="a-propos" className="py-20 px-6 bg-white text-center">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold mb-4 font-poppins">À propos de moi</h2>
-          <p className="text-gray-600 text-lg font-poppins">
+          <h2 className="text-3xl font-bold mb-4">À propos de moi</h2>
+          <p className="text-gray-600 text-lg">
             Olga est une esthéticienne spécialisée dans les soins personnalisés et les techniques avancées.
             Avec des années d'expérience, elle vous garantit une peau éclatante et un bien-être absolu.
           </p>
@@ -156,7 +167,7 @@ export default function Home() {
       {/* Soins / Galerie Section */}
       <section id="soins" className="py-20 px-6 bg-gray-100">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-10 font-poppins">Soins et Galerie</h2>
+          <h2 className="text-3xl font-bold text-center mb-10">Soins et Galerie</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[1, 2, 3, 4, 5, 6].map((image) => (
               <div
@@ -177,14 +188,14 @@ export default function Home() {
       {/* Gift Section */}
       <section id="offrir" className="py-20 px-6 bg-pink-50 text-center">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold mb-4 font-poppins">Offrez un cadeau</h2>
-          <p className="text-gray-600 text-lg font-poppins">
+          <h2 className="text-3xl font-bold mb-4">Offrez un cadeau</h2>
+          <p className="text-gray-600 text-lg">
             Faites plaisir à vos proches avec un bon cadeau pour un soin personnalisé.
           </p>
           <motion.button
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
-            className="mt-6 px-6 py-3 bg-pink-600 text-white text-lg font-bold rounded-lg shadow-md font-poppins"
+            className="mt-6 px-6 py-3 bg-pink-600 text-white text-lg font-bold rounded-lg shadow-md"
           >
             Acheter un bon cadeau
           </motion.button>
@@ -194,9 +205,9 @@ export default function Home() {
       {/* Carte Section */}
       <section id="carte" className="py-20 px-6 bg-white">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold mb-4 text-center font-poppins">Nous trouver</h2>
+          <h2 className="text-3xl font-bold mb-4 text-center">Nous trouver</h2>
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2884.469179003254!2d7.26916494077989!3d43.700797849470966!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12cddaa5cb80da29%3A0x819061a85fa2183e!2s23%20Rue%20Pastorelli%2C%2006000%20Nice!5e0!3m2!1sfr!2sfr!4v1736194751049!5m2!1sfr!2sfr"
+            src="https://www.google.com/maps/embed?pb=... (votre URL ici)"
             width="100%"
             height="300"
             className="rounded-lg shadow-md"
@@ -209,18 +220,18 @@ export default function Home() {
       {/* Contact Section */}
       <section id="contact" className="py-20 px-6 bg-gray-100 text-center">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold mb-4 font-poppins">Contactez-nous</h2>
-          <p className="text-gray-600 text-lg mb-6 font-poppins">
+          <h2 className="text-3xl font-bold mb-4">Contactez-nous</h2>
+          <p className="text-gray-600 text-lg mb-6">
             Prenez rendez-vous ou contactez-nous pour toute question.
           </p>
-          <p className="text-lg font-poppins">📞 01 23 45 67 89</p>
-          <p className="text-lg font-poppins">📧 contact@olgabeautyexpert.com</p>
-          <p className="text-lg font-poppins">📍 23 Rue Pastorelli, 06000 Nice</p>
+          <p className="text-lg">📞 01 23 45 67 89</p>
+          <p className="text-lg">📧 contact@olgabeautyexpert.com</p>
+          <p className="text-lg">📍 23 Rue Pastorelli, 06000 Nice</p>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="bg-pink-600 text-white text-center py-6 font-poppins">
+      <footer className="bg-[#B39D6F] text-white text-center py-6">
         <p>© 2025 Olga Beauty Expert. Tous droits réservés.</p>
       </footer>
     </div>
