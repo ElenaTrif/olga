@@ -294,7 +294,6 @@ export default function Home() {
             width="100%"
             height="300"
             className="rounded-lg shadow-md"
-            allowFullScreen=""
             loading="lazy"
           ></iframe>
         </div>
