@@ -42,7 +42,7 @@ p, a {
 }
 
 /* Appliquer Bentham à tous les h1 */
-h1 {
+h1, h2 {
   font-family: var(--font-bentham), sans-serif; /* Appliquer Bentham à tous les h1 */
 }
 
