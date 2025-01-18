@@ -115,6 +115,7 @@ export default function Home() {
           autoPlay
           loop
           muted
+          playsInline
         ></video>
         <div className="absolute inset-0 flex flex-col items-center justify-center mt-20 mb-1">
           {/* SVG Animé avec Motion */}
